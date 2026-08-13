@@ -508,3 +508,1012 @@ body.dark .bottom-nav {
         height: 20px;
     }
 }
+
+/* =========================================================
+   HALAMAN INTERNAL
+   Pendaftaran.html & Tentang.html
+   CSS ini tidak mengubah komponen landing page
+========================================================= */
+
+.internal-page {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    padding-bottom: 100px;
+}
+
+
+/* =========================================================
+   HEADER INTERNAL
+========================================================= */
+
+.internal-page .internal-header {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 205px;
+    padding: 25px 20px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #074128,
+            #187449
+        );
+
+    border-radius: 0 0 28px 28px;
+}
+
+.internal-page .internal-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.07);
+
+    right: -80px;
+    top: -90px;
+}
+
+.internal-page .internal-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(216,167,44,.12);
+
+    left: -70px;
+    bottom: -80px;
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+========================================================= */
+
+.internal-page .internal-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.internal-page .internal-logo {
+    width: 55px !important;
+    height: 55px !important;
+
+    border-radius: 15px;
+
+    background-color:
+        rgba(255,255,255,.95);
+
+    background-image:
+        url("logo-badril-huda.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        43px 43px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.45);
+
+    margin-bottom: 14px;
+
+    box-shadow:
+        0 5px 16px
+        rgba(0,0,0,.10);
+}
+
+
+/* =========================================================
+   JUDUL HEADER
+========================================================= */
+
+.internal-page .internal-header h1 {
+    font-size: 25px;
+    line-height: 1.2;
+
+    margin-bottom: 7px;
+}
+
+.internal-page .internal-header p {
+    max-width: 600px;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    opacity: .86;
+}
+
+
+/* =========================================================
+   TOMBOL DARK / LIGHT
+========================================================= */
+
+.internal-page .internal-theme-btn {
+    position: absolute;
+
+    right: 18px;
+    top: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid
+        rgba(255,255,255,.15);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.14);
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: .2s ease;
+}
+
+.internal-page .internal-theme-btn:hover {
+    background:
+        rgba(255,255,255,.25);
+
+    transform:
+        scale(1.05);
+}
+
+.internal-page .internal-theme-btn:active {
+    transform:
+        scale(.92);
+}
+
+
+/* =========================================================
+   KONTEN INTERNAL
+========================================================= */
+
+.internal-page .internal-content {
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+
+    padding:
+        22px 16px;
+}
+
+
+/* =========================================================
+   JUDUL HALAMAN
+========================================================= */
+
+.internal-page .internal-title {
+    margin-bottom: 18px;
+}
+
+.internal-page .internal-label {
+    display: inline-block;
+
+    padding:
+        5px 10px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(23,107,69,.10);
+
+    color:
+        var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    margin-bottom: 8px;
+}
+
+.internal-page .internal-title h2 {
+    font-size: 22px;
+    line-height: 1.3;
+
+    margin-bottom: 7px;
+}
+
+.internal-page .internal-title p {
+    color:
+        var(--muted);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CARD INTERNAL
+========================================================= */
+
+.internal-page .internal-card {
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        18px;
+
+    padding:
+        18px;
+
+    margin-bottom:
+        15px;
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        background .3s ease,
+        border .3s ease,
+        color .3s ease;
+}
+
+.internal-page .internal-card h2 {
+    font-size: 19px;
+    line-height: 1.35;
+
+    margin-bottom: 11px;
+}
+
+.internal-page .internal-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.internal-page .internal-card p {
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 11px;
+}
+
+.internal-page .internal-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   STATUS PENDAFTARAN
+========================================================= */
+
+.internal-page .registration-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        20px;
+
+    padding:
+        20px;
+
+    margin-bottom:
+        15px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.internal-page .registration-icon {
+    flex: 0 0 56px;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(23,107,69,.10);
+
+    color:
+        var(--primary);
+}
+
+.internal-page .registration-icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+.internal-page .registration-status h3 {
+    font-size: 16px;
+    line-height: 1.4;
+
+    margin-bottom: 5px;
+}
+
+.internal-page .registration-status p {
+    color:
+        var(--muted);
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   INFO BOX
+========================================================= */
+
+.internal-page .internal-info {
+    display: flex;
+
+    gap: 13px;
+
+    padding: 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(23,107,69,.07);
+
+    border:
+        1px solid
+        rgba(23,107,69,.12);
+}
+
+.internal-page .internal-info-icon {
+    flex: 0 0 40px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+
+    background:
+        var(--primary);
+
+    color:
+        #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.internal-page .internal-info-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.internal-page .internal-info h3 {
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.internal-page .internal-info p {
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   TOMBOL UTAMA
+========================================================= */
+
+.internal-page .internal-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 47px;
+
+    padding:
+        11px 18px;
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color:
+        #ffffff;
+
+    text-decoration:
+        none;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 7px 20px
+        rgba(23,107,69,.18);
+
+    transition:
+        .2s ease;
+}
+
+.internal-page .internal-button:hover {
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   PROFIL YPI
+========================================================= */
+
+.internal-page .profile-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 9px;
+
+    margin-top: 16px;
+}
+
+.internal-page .profile-item {
+    padding: 12px;
+
+    border-radius: 13px;
+
+    background:
+        var(--bg);
+
+    border:
+        1px solid
+        var(--border);
+}
+
+.internal-page .profile-item span {
+    display: block;
+
+    color:
+        var(--muted);
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+.internal-page .profile-item strong {
+    display: block;
+
+    color:
+        var(--text);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TIMELINE SEJARAH
+========================================================= */
+
+.internal-page .timeline {
+    margin-top: 20px;
+
+    border-left:
+        2px solid
+        var(--border);
+
+    padding-left: 18px;
+}
+
+.internal-page .timeline-item {
+    position: relative;
+
+    margin-bottom: 21px;
+}
+
+.internal-page .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.internal-page .timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background:
+        var(--primary);
+
+    left: -24px;
+    top: 4px;
+
+    box-shadow:
+        0 0 0 4px
+        var(--card);
+}
+
+.internal-page .timeline-year {
+    color:
+        var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 3px;
+}
+
+.internal-page .timeline-item h3 {
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+.internal-page .timeline-item p {
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   VISI
+========================================================= */
+
+.internal-page .vision-box {
+    padding: 17px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color:
+        #ffffff;
+
+    margin-bottom: 18px;
+}
+
+.internal-page .vision-box h3 {
+    color:
+        #ffffff;
+
+    margin-bottom: 6px;
+}
+
+.internal-page .vision-box p {
+    color:
+        rgba(255,255,255,.90);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   MISI
+========================================================= */
+
+.internal-page .mission-title {
+    font-size: 15px;
+
+    margin-bottom: 9px;
+}
+
+.internal-page .mission-list {
+    padding-left: 21px;
+}
+
+.internal-page .mission-list li {
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   LEMBAGA PENDIDIKAN
+========================================================= */
+
+.internal-page .institution-list {
+    display:
+        grid;
+
+    gap: 9px;
+}
+
+.internal-page .institution-item {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        13px;
+
+    border-radius:
+        14px;
+
+    background:
+        var(--bg);
+
+    border:
+        1px solid
+        var(--border);
+}
+
+.internal-page .institution-icon {
+    width:
+        43px;
+
+    height:
+        43px;
+
+    flex:
+        0 0 43px;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(23,107,69,.10);
+
+    color:
+        var(--primary);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+.internal-page .institution-icon svg {
+    width:
+        20px;
+
+    height:
+        20px;
+}
+
+.internal-page .institution-item h3 {
+    font-size:
+        14px;
+
+    margin:
+        0 0 3px;
+}
+
+.internal-page .institution-item p {
+    font-size:
+        11px;
+
+    margin:
+        0;
+}
+
+
+/* =========================================================
+   NAVIGASI BAWAH UNTUK HALAMAN INTERNAL
+========================================================= */
+
+.internal-page .internal-nav {
+    position:
+        fixed;
+
+    bottom:
+        12px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        calc(100% - 24px);
+
+    max-width:
+        850px;
+
+    height:
+        65px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        20px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    align-items:
+        center;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.15);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    z-index:
+        100;
+}
+
+.internal-page .internal-nav-item {
+    height:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        4px;
+
+    color:
+        var(--muted);
+
+    text-decoration:
+        none;
+
+    font-size:
+        10px;
+
+    transition:
+        .2s ease;
+}
+
+.internal-page .internal-nav-item svg {
+    width:
+        20px;
+
+    height:
+        20px;
+}
+
+.internal-page .internal-nav-item:hover {
+    color:
+        var(--primary);
+
+    transform:
+        translateY(-2px);
+}
+
+.internal-page .internal-nav-item.active {
+    color:
+        var(--primary);
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 600px) {
+
+    .internal-page .internal-header {
+        min-height:
+            220px;
+
+        padding:
+            35px;
+
+        border-radius:
+            0 0 30px 30px;
+    }
+
+    .internal-page .internal-header h1 {
+        font-size:
+            30px;
+    }
+
+    .internal-page .internal-content {
+        padding:
+            28px 25px;
+    }
+
+    .internal-page .internal-card {
+        padding:
+            23px;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 850px) {
+
+    .internal-page .internal-content {
+        padding:
+            32px 30px;
+    }
+
+}
+
+
+/* =========================================================
+   HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .internal-page .internal-header {
+        min-height:
+            200px;
+
+        padding:
+            25px 20px;
+    }
+
+    .internal-page .internal-header h1 {
+        font-size:
+            25px;
+    }
+
+    .internal-page .internal-header p {
+        font-size:
+            12px;
+    }
+
+    .internal-page .internal-content {
+        padding:
+            20px 14px;
+    }
+
+    .internal-page .registration-status {
+        align-items:
+            flex-start;
+
+        padding:
+            18px;
+    }
+
+    .internal-page .registration-icon {
+        flex:
+            0 0 48px;
+
+        width:
+            48px;
+
+        height:
+            48px;
+    }
+
+    .internal-page .profile-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .internal-page .internal-card {
+        padding:
+            18px;
+    }
+
+    .internal-page .internal-nav {
+        width:
+            calc(100% - 18px);
+
+        bottom:
+            8px;
+
+        height:
+            67px;
+    }
+
+}
