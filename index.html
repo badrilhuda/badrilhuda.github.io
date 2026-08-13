@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pusat Informasi YPI Badril Huda</title>
+
+<style>
+:root {
+    --primary: #176b45;
+    --primary-dark: #0e4d32;
+    --accent: #d8a72c;
+    --bg: #f4f7f5;
+    --card: #ffffff;
+    --text: #1d2923;
+    --muted: #718078;
+    --border: #e4e9e6;
+    --shadow: 0 8px 25px rgba(0,0,0,.07);
+}
+
+body.dark {
+    --primary: #23915f;
+    --primary-dark: #14623f;
+    --accent: #e8bd45;
+    --bg: #101613;
+    --card: #18201c;
+    --text: #edf4ef;
+    --muted: #9daaa3;
+    --border: #29332e;
+    --shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: .3s;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.app {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    min-height: 100vh;
+    padding-bottom: 90px;
+}
+
+/* =========================
+   HEADER SPANDUK
+========================= */
+
+.header {
+    position: relative;
+    overflow: hidden;
+    min-height: 190px;
+    padding: 25px 20px;
+    color: white;
+    background:
+        linear-gradient(135deg,
+        rgba(7,65,40,.96),
+        rgba(24,116,73,.90));
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.07);
+    right: -80px;
+    top: -80px;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(216,167,44,.12);
+    left: -70px;
+    bottom: -80px;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: rgba(255,255,255,.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,.2);
+    margin-bottom: 14px;
+}
+
+.header h1 {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.header p {
+    font-size: 13px;
+    opacity: .85;
+    max-width: 600px;
+}
+
+/* tombol mode */
+
+.theme-btn {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.14);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    padding: 20px 16px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.section-title h2 {
+    font-size: 18px;
+}
+
+.section-title span {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================
+   QUICK MENU
+========================= */
+
+.quick-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 27px;
+}
+
+.quick-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 13px 5px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.quick-item:hover {
+    transform: translateY(-3px);
+}
+
+.quick-icon {
+    width: 40px;
+    height: 40px;
+    margin: auto auto 7px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(23,107,69,.1);
+    color: var(--primary);
+    font-size: 19px;
+}
+
+.quick-item span {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =========================
+   ARTICLE CARD
+========================= */
+
+.article-list {
+    display: grid;
+    gap: 15px;
+}
+
+.article-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .25s;
+}
+
+.article-card:hover {
+    transform: translateY(-2px);
+}
+
+.article-image {
+    height: 155px;
+    background:
+        linear-gradient(135deg,
+        #176b45,
+        #0d4930);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    color: white;
+}
+
+.article-image::before {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border: 25px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+    right: -30px;
+    top: -40px;
+}
+
+.article-category {
+    position: relative;
+    z-index: 2;
+    background: var(--accent);
+    color: #3d2c04;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.article-body {
+    padding: 16px;
+}
+
+.article-title {
+    font-size: 17px;
+    line-height: 1.35;
+    margin-bottom: 7px;
+}
+
+.article-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 13px;
+}
+
+.article-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.read-more {
+    color: var(--primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================
+   ANNOUNCEMENT
+========================= */
+
+.announcement {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+    color: white;
+    padding: 17px;
+    border-radius: 18px;
+    margin-bottom: 27px;
+    box-shadow: var(--shadow);
+}
+
+.announcement small {
+    opacity: .75;
+    font-size: 10px;
+}
+
+.announcement h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.announcement p {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: .85;
+}
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 850px;
+    height: 65px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 10px 35px rgba(0,0,0,.15);
+    z-index: 100;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--muted);
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.nav-item i {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 600px) {
+
+    .header {
+        min-height: 220px;
+        padding: 35px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .header h1 {
+        font-size: 31px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 28px 25px;
+    }
+
+    .article-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article-image {
+        height: 170px;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 850px) {
+
+    .app {
+        background: var(--bg);
+    }
+
+    .header {
+        border-radius: 0 0 30px 30px;
+    }
+
+    .quick-menu {
+        gap: 14px;
+    }
+
+    .article-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
+            ☾
+        </button>
+
+        <div class="header-content">
+
+            <div class="logo">
+                BH
+            </div>
+
+            <h1>Pusat Informasi<br>YPI Badril Huda</h1>
+
+            <p>
+                Informasi, berita, pengumuman dan kegiatan
+                YPI Badril Huda dalam satu tempat.
+            </p>
+
+        </div>
+    </header>
+
+
+    <main class="content">
+
+        <!-- MENU CEPAT -->
+        <div class="section-title">
+            <h2>Menu Informasi</h2>
+            <span>Selengkapnya ›</span>
+        </div>
+
+        <div class="quick-menu">
+
+            <div class="quick-item">
+                <div class="quick-icon">📢</div>
+                <span>Pengumuman</span>
+            </div>
+
+            <div class="quick-item">
+                <div class="quick-icon">📰</div>
+                <span>Berita</span>
+            </div>
+
+            <div class="quick-item">
+                <div class="quick-icon">📅</div>
+                <span>Agenda</span>
+            </div>
+
+            <div class="quick-item">
+                <div class="quick-icon">🏫</div>
+                <span>Madrasah</span>
+            </div>
+
+        </div>
+
+
+        <!-- PENGUMUMAN -->
+        <div class="announcement">
+
+            <small>📌 PENGUMUMAN TERBARU</small>
+
+            <h3>Informasi Kegiatan YPI Badril Huda</h3>
+
+            <p>
+                Simak informasi terbaru mengenai kegiatan,
+                program pendidikan dan agenda YPI Badril Huda.
+            </p>
+
+        </div>
+
+
+        <!-- ARTIKEL -->
+        <div class="section-title">
+            <h2>Artikel & Berita</h2>
+            <span>Lihat semua ›</span>
+        </div>
+
+
+        <div class="article-list">
+
+            <article class="article-card">
+
+                <div class="article-image">
+                    <span class="article-category">
+                        PENDIDIKAN
+                    </span>
+                </div>
+
+                <div class="article-body">
+
+                    <h3 class="article-title">
+                        Meningkatkan Semangat Belajar
+                        Peserta Didik
+                    </h3>
+
+                    <p class="article-description">
+                        Pendidikan merupakan bagian penting dalam
+                        membentuk generasi yang berilmu,
+                        berakhlak dan berprestasi.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>13 Agustus 2026</span>
+                        <span class="read-more">
+                            Baca ›
+                        </span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="article-image">
+                    <span class="article-category">
+                        KEGIATAN
+                    </span>
+                </div>
+
+                <div class="article-body">
+
+                    <h3 class="article-title">
+                        Kegiatan YPI Badril Huda
+                    </h3>
+
+                    <p class="article-description">
+                        Berbagai kegiatan pendidikan dan
+                        pengembangan peserta didik terus
+                        dilaksanakan secara berkelanjutan.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>12 Agustus 2026</span>
+                        <span class="read-more">
+                            Baca ›
+                        </span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="article-image">
+                    <span class="article-category">
+                        MADRASAH
+                    </span>
+                </div>
+
+                <div class="article-body">
+
+                    <h3 class="article-title">
+                        Informasi Madrasah Badril Huda
+                    </h3>
+
+                    <p class="article-description">
+                        Informasi seputar program, kegiatan dan
+                        perkembangan lembaga pendidikan
+                        Badril Huda.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>10 Agustus 2026</span>
+                        <span class="read-more">
+                            Baca ›
+                        </span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+
+        <div class="nav-item active">
+            <i>⌂</i>
+            Beranda
+        </div>
+
+        <div class="nav-item">
+            <i>📰</i>
+            Berita
+        </div>
+
+        <div class="nav-item">
+            <i>📅</i>
+            Agenda
+        </div>
+
+        <div class="nav-item">
+            <i>ℹ</i>
+            Tentang
+        </div>
+
+    </nav>
+
+</div>
+
+
+<script>
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark");
+
+    const button = document.getElementById("themeBtn");
+
+    if (document.body.classList.contains("dark")) {
+        button.innerHTML = "☀";
+        localStorage.setItem("theme", "dark");
+    } else {
+        button.innerHTML = "☾";
+        localStorage.setItem("theme", "light");
+    }
+}
+
+
+// Simpan mode terakhir
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    document.getElementById("themeBtn").innerHTML = "☀";
+}
+
+</script>
+
+</body>
+</html>
