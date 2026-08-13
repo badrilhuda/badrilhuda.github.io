@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran - YPI Badril Huda</title>
+<style>
+/* CSS KHUSUS HALAMAN INTERNAL - TIDAK MENGUBAH LANDING PAGE */
+.internal-page{
+--ip-primary:#176b45;--ip-primary-dark:#0e4d32;--ip-accent:#d8a72c;
+--ip-bg:#f4f7f5;--ip-card:#fff;--ip-text:#1d2923;--ip-muted:#718078;--ip-border:#e4e9e6;
+min-height:100vh;background:var(--ip-bg);color:var(--ip-text);padding-bottom:95px;
+font-family:"Segoe UI",Arial,sans-serif;transition:.3s;
+}
+.internal-page.dark{--ip-primary:#3ab477;--ip-primary-dark:#14623f;--ip-accent:#e8bd45;--ip-bg:#0d1411;--ip-card:#17201b;--ip-text:#edf4ef;--ip-muted:#a6b2ab;--ip-border:#2b3831;}
+.internal-page *{box-sizing:border-box}
+.internal-page .ip-header{position:relative;overflow:hidden;min-height:220px;padding:28px 22px;color:#fff;background:linear-gradient(135deg,#07522f,#27805a);border-radius:0 0 30px 30px}
+.internal-page .ip-header:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.07);right:-100px;top:-110px}
+.internal-page .ip-header:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(216,167,44,.1);left:-75px;bottom:-95px}
+.internal-page .ip-head-content{position:relative;z-index:2}
+.internal-page .ip-logo{width:55px;height:55px;border-radius:15px;background:#fff url("logo-badril-huda.png") center/43px 43px no-repeat;border:1px solid rgba(255,255,255,.45);margin-bottom:14px;box-shadow:0 5px 16px rgba(0,0,0,.1)}
+.internal-page .ip-header h1{font-size:27px;line-height:1.2;margin:0 0 7px}
+.internal-page .ip-header p{font-size:13px;line-height:1.5;opacity:.87;max-width:650px}
+.internal-page .ip-theme{position:absolute;right:18px;top:18px;width:44px;height:44px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.15);color:#fff;cursor:pointer;z-index:5;font-size:19px}
+.internal-page .ip-content{max-width:900px;margin:auto;padding:22px 16px}
+.internal-page .ip-label{display:inline-block;padding:5px 10px;border-radius:20px;background:rgba(23,107,69,.1);color:var(--ip-primary);font-size:10px;font-weight:800;letter-spacing:.5px;margin-bottom:8px}
+.internal-page .ip-title{margin-bottom:18px}.internal-page .ip-title h2{font-size:23px;line-height:1.3;margin:0 0 7px}.internal-page .ip-title p{font-size:13px;line-height:1.6;color:var(--ip-muted)}
+.internal-page .ip-card{background:var(--ip-card);border:1px solid var(--ip-border);border-radius:18px;padding:19px;margin-bottom:15px;box-shadow:0 8px 25px rgba(0,0,0,.07)}
+.internal-page.dark .ip-card{box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.internal-page .ip-card h2{font-size:19px;margin:0 0 11px}.internal-page .ip-card h3{font-size:15px;margin:0 0 6px}.internal-page .ip-card p{font-size:13px;line-height:1.7;color:var(--ip-muted);margin:0 0 11px}.internal-page .ip-card p:last-child{margin-bottom:0}
+.internal-page .ip-status{display:flex;gap:15px;align-items:center}.internal-page .ip-status-icon{width:56px;height:56px;flex:0 0 56px;border-radius:16px;background:rgba(23,107,69,.1);display:flex;align-items:center;justify-content:center;font-size:25px}
+.internal-page .ip-status h3{font-size:16px;line-height:1.4}.internal-page .ip-status p{font-size:12px;line-height:1.55}
+.internal-page .ip-info{padding:16px;border-radius:16px;background:rgba(23,107,69,.07);border:1px solid rgba(23,107,69,.12);margin-bottom:18px}
+.internal-page .ip-button{display:flex;align-items:center;justify-content:center;min-height:47px;width:100%;padding:11px 18px;border-radius:14px;background:linear-gradient(135deg,var(--ip-primary),var(--ip-primary-dark));color:#fff;text-decoration:none;font-size:13px;font-weight:700}
+.internal-page .ip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:15px}.internal-page .ip-grid-item{padding:12px;border-radius:13px;background:var(--ip-bg);border:1px solid var(--ip-border)}.internal-page .ip-grid-item span{display:block;color:var(--ip-muted);font-size:10px;margin-bottom:4px}.internal-page .ip-grid-item strong{font-size:13px}
+.internal-page .ip-timeline{border-left:2px solid var(--ip-border);padding-left:18px;margin-top:18px}.internal-page .ip-time{position:relative;margin-bottom:20px}.internal-page .ip-time:last-child{margin-bottom:0}.internal-page .ip-time:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--ip-primary);left:-24px;top:4px;box-shadow:0 0 0 4px var(--ip-card)}.internal-page .ip-year{font-size:12px;font-weight:800;color:var(--ip-primary);margin-bottom:3px}.internal-page .ip-time h3{font-size:14px}.internal-page .ip-time p{font-size:12px}
+.internal-page .ip-vision{padding:17px;border-radius:16px;background:linear-gradient(135deg,var(--ip-primary),var(--ip-primary-dark));color:#fff}.internal-page .ip-vision p{color:rgba(255,255,255,.9);margin:0}.internal-page .ip-missions{padding-left:21px;margin-top:10px}.internal-page .ip-missions li{font-size:13px;line-height:1.6;color:var(--ip-muted);margin-bottom:7px}
+.internal-page .ip-institutions{display:grid;gap:9px}.internal-page .ip-institution{display:flex;align-items:center;gap:12px;padding:13px;border-radius:14px;background:var(--ip-bg);border:1px solid var(--ip-border)}.internal-page .ip-school-icon{width:43px;height:43px;flex:0 0 43px;border-radius:12px;background:rgba(23,107,69,.1);display:flex;align-items:center;justify-content:center;font-size:20px}.internal-page .ip-institution h3{font-size:14px;margin:0 0 3px}.internal-page .ip-institution p{font-size:11px;margin:0}
+.internal-page .ip-nav{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:calc(100% - 20px);max-width:850px;height:68px;background:rgba(255,255,255,.96);border:1px solid var(--ip-border);border-radius:21px;display:grid;grid-template-columns:repeat(4,1fr);z-index:100;box-shadow:0 10px 35px rgba(0,0,0,.15);backdrop-filter:blur(12px)}.internal-page.dark .ip-nav{background:rgba(23,32,27,.96)}.internal-page .ip-nav a{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:var(--ip-muted);font-size:10px}.internal-page .ip-nav a.active{color:var(--ip-primary);font-weight:700}.internal-page .ip-nav a:hover{color:var(--ip-primary);transform:translateY(-2px)}
+@media(min-width:600px){.internal-page .ip-header{min-height:250px;padding:38px 35px}.internal-page .ip-content{padding:28px 25px}.internal-page .ip-header h1{font-size:31px}.internal-page .ip-card{padding:23px}}
+@media(max-width:480px){.internal-page .ip-status{align-items:flex-start}.internal-page .ip-card{padding:17px}.internal-page .ip-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="internal-page" id="internalPage">
+<header class="ip-header">
+<button class="ip-theme" id="themeBtn" type="button" aria-label="Mode gelap">☾</button>
+<div class="ip-head-content">
+<div class="ip-logo"></div>
+<h1>Pendaftaran YPI Badril Huda</h1>
+<p>Informasi pendaftaran dan penerimaan peserta didik YPI Badril Huda.</p>
+</div>
+</header>
+<main class="ip-content">
+
+<div class="ip-title"><span class="ip-label">PENDAFTARAN</span><h2>Pendaftaran Peserta Didik</h2><p>Layanan pendaftaran online YPI Badril Huda sedang dipersiapkan untuk terhubung dengan database.</p></div>
+<section class="ip-card ip-status"><div class="ip-status-icon">▣</div><div><h3>Halaman ini masih dalam proses sinkronisasi database</h3><p>Sistem pendaftaran online sedang dalam tahap pengembangan dan sinkronisasi dengan database YPI Badril Huda.</p></div></section>
+<section class="ip-info"><h3>Mohon Bersabar</h3><p>Silakan kembali lagi setelah sistem pendaftaran online tersedia. Informasi terbaru akan ditampilkan melalui Pusat Informasi YPI Badril Huda.</p></section>
+<a href="https://badrilhuda.github.io" class="ip-button">← Kembali ke Beranda</a>
+
+</main>
+
+    <nav class="ip-nav">
+      <a href="https://badrilhuda.github.io" class="">⌂<span>Beranda</span></a>
+      <a href="pendaftaran.html" class="active">📝<span>Pendaftaran</span></a>
+      <a href="https://badrilhuda.github.io/absensi/" class="">▦<span>Absensi</span></a>
+      <a href="tentang.html" class="">ⓘ<span>Tentang</span></a>
+    </nav>
+</div>
+<script>
+(function(){
+ const page=document.getElementById('internalPage');
+ const btn=document.getElementById('themeBtn');
+ const key='badrilHudaTheme';
+ function apply(t){
+   const dark=t==='dark';
+   page.classList.toggle('dark',dark);
+   btn.textContent=dark?'☀':'☾';
+   btn.setAttribute('aria-label',dark?'Aktifkan mode terang':'Aktifkan mode gelap');
+ }
+ let saved=localStorage.getItem(key);
+ if(saved!=='dark' && saved!=='light') saved='light';
+ apply(saved);
+ btn.onclick=()=>{const next=page.classList.contains('dark')?'light':'dark';localStorage.setItem(key,next);apply(next);};
+})();
+</script>
+</body>
+</html>
