@@ -508,3 +508,61 @@ body.dark .bottom-nav {
         height: 20px;
     }
 }
+
+
+
+/* =========================================================
+   FINAL LOGO FIX - LANDING PAGE
+========================================================= */
+.header .logo {
+    width: 55px !important;
+    height: 55px !important;
+    min-width: 55px !important;
+    min-height: 55px !important;
+    max-width: 55px !important;
+    max-height: 55px !important;
+    padding: 4px !important;
+    margin-bottom: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.header .logo img {
+    display: block !important;
+    width: 47px !important;
+    height: 47px !important;
+    min-width: 47px !important;
+    min-height: 47px !important;
+    max-width: 47px !important;
+    max-height: 47px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.header .theme-btn {
+    z-index: 999 !important;
+    pointer-events: auto !important;
+}
+
+@media (min-width: 600px) {
+    .header .logo {
+        width: 55px !important;
+        height: 55px !important;
+        min-width: 55px !important;
+        min-height: 55px !important;
+        max-width: 55px !important;
+        max-height: 55px !important;
+    }
+    .header .logo img {
+        width: 47px !important;
+        height: 47px !important;
+        min-width: 47px !important;
+        min-height: 47px !important;
+        max-width: 47px !important;
+        max-height: 47px !important;
+    }
+}
