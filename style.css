@@ -1,510 +1,985 @@
+/* =========================================================
+   YPI BADRIL HUDA
+   STYLE.CSS LANDING PAGE
+========================================================= */
+
 :root {
-    --primary: #176b45;
-    --primary-dark: #0e4d32;
-    --accent: #d8a72c;
+    --primary: #126b45;
+    --primary-dark: #0c5035;
+
     --bg: #f4f7f5;
     --card: #ffffff;
-    --text: #1d2923;
-    --muted: #718078;
-    --border: #e4e9e6;
-    --shadow: 0 8px 25px rgba(0,0,0,.07);
+    --text: #132019;
+    --muted: #718079;
+
+    --soft: #e7f0eb;
+    --border: #dfe7e2;
+
+    --shadow:
+        0 10px 28px rgba(20, 60, 42, 0.08);
 }
 
+/* =========================================================
+   DARK MODE
+========================================================= */
+
 body.dark {
-    --primary: #23915f;
-    --primary-dark: #14623f;
-    --accent: #e8bd45;
-    --bg: #101613;
-    --card: #18201c;
-    --text: #edf4ef;
-    --muted: #9daaa3;
-    --border: #29332e;
-    --shadow: 0 8px 25px rgba(0,0,0,.25);
+    --primary: #36a875;
+    --primary-dark: #1b6948;
+
+    --bg: #101512;
+    --card: #19211d;
+    --text: #edf5f0;
+    --muted: #a4b0a9;
+
+    --soft: #20342b;
+    --border: #2b3831;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30);
 }
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     box-sizing: border-box;
+}
+
+html {
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
     background: var(--bg);
     color: var(--text);
-    transition: .3s;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+button,
+a {
+    font-family: inherit;
+}
+
+.svg-defs {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.icon {
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* =========================================================
+   APP
+========================================================= */
 
 .app {
+    position: relative;
+
     width: 100%;
     max-width: 900px;
-    margin: auto;
+
     min-height: 100vh;
-    padding-bottom: 90px;
+
+    margin: 0 auto;
+
+    padding-bottom: 105px;
 }
 
-/* =========================
-   HEADER SPANDUK
-========================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
 .header {
     position: relative;
+
     overflow: hidden;
-    min-height: 190px;
-    padding: 25px 20px;
-    color: white;
+
+    isolation: isolate;
+
+    width: 100%;
+
+    min-height: 300px;
+
+    padding:
+        45px 44px 38px;
+
+    color: #ffffff;
+
     background:
-        linear-gradient(135deg,
-        rgba(7,65,40,.96),
-        rgba(24,116,73,.90));
+        linear-gradient(
+            135deg,
+            #0b5938 0%,
+            #1d8055 100%
+        );
+
+    border-radius:
+        0 0 34px 34px;
 }
+
+/* Lingkaran kanan atas */
 
 .header::before {
     content: "";
+
     position: absolute;
-    width: 230px;
-    height: 230px;
+
+    z-index: -1;
+
+    width: 270px;
+    height: 270px;
+
+    right: -90px;
+    top: -105px;
+
     border-radius: 50%;
-    background: rgba(255,255,255,.07);
-    right: -80px;
-    top: -80px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
 }
+
+/* Lingkaran kiri bawah */
 
 .header::after {
     content: "";
+
     position: absolute;
-    width: 150px;
-    height: 150px;
+
+    z-index: -1;
+
+    width: 145px;
+    height: 145px;
+
+    left: -72px;
+    bottom: -78px;
+
     border-radius: 50%;
-    background: rgba(216,167,44,.12);
-    left: -70px;
-    bottom: -80px;
+
+    background:
+        rgba(180, 160, 45, 0.13);
 }
+
+/* =========================================================
+   HEADER CONTENT
+========================================================= */
 
 .header-content {
     position: relative;
+
     z-index: 2;
 }
 
+/* =========================================================
+   LOGO
+========================================================= */
+
 .logo {
-    width: 55px;
-    height: 55px;
-    border-radius: 15px;
-    background: rgba(255,255,255,.15);
-    display: flex;
+    position: relative;
+
+    width: 55px !important;
+    height: 55px !important;
+
+    min-width: 55px !important;
+    min-height: 55px !important;
+
+    max-width: 55px !important;
+    max-height: 55px !important;
+
+    padding: 4px !important;
+
+    margin:
+        0 0 20px 0 !important;
+
+    display: flex !important;
+
     align-items: center;
     justify-content: center;
-    font-size: 25px;
-    font-weight: bold;
-    border: 1px solid rgba(255,255,255,.2);
-    margin-bottom: 14px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        0 5px 16px
+        rgba(0, 0, 0, 0.10);
 }
 
+/* Logo gambar */
+
+.logo img {
+    display: block !important;
+
+    width: 47px !important;
+    height: 47px !important;
+
+    min-width: 47px !important;
+    min-height: 47px !important;
+
+    max-width: 47px !important;
+    max-height: 47px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+}
+
+/* =========================================================
+   JUDUL
+========================================================= */
+
 .header h1 {
-    font-size: 25px;
-    line-height: 1.2;
-    margin-bottom: 7px;
+    margin:
+        0 0 8px 0;
+
+    font-size: 36px;
+
+    line-height: 1.16;
+
+    letter-spacing:
+        -0.5px;
+
+    color: #ffffff;
 }
 
 .header p {
-    font-size: 13px;
-    opacity: .85;
-    max-width: 600px;
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    color:
+        rgba(255, 255, 255, 0.90);
 }
 
-/* =========================
-   TOMBOL MODE
-========================= */
+/* =========================================================
+   TOMBOL DARK / LIGHT
+========================================================= */
 
 .theme-btn {
     position: absolute;
-    right: 18px;
-    top: 18px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(255,255,255,.14);
-    color: white;
-    cursor: pointer;
+
+    z-index: 100;
+
+    top: 22px;
+    right: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.20);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    outline: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
-.theme-btn svg {
-    width: 19px;
-    height: 19px;
+.theme-btn .icon {
+    width: 22px;
+    height: 22px;
 }
 
-/* =========================
+.theme-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    transform:
+        scale(1.05);
+}
+
+.theme-btn:active {
+    transform:
+        scale(0.92);
+}
+
+/* =========================================================
    CONTENT
-========================= */
+========================================================= */
 
 .content {
-    padding: 20px 16px;
+    width: 100%;
+
+    padding:
+        34px 26px 25px;
 }
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
 
 .section-title {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
-    margin-bottom: 14px;
+
+    gap: 15px;
+
+    margin:
+        0 0 18px;
 }
 
 .section-title h2 {
-    font-size: 18px;
+    margin: 0;
+
+    font-size: 23px;
+
+    line-height: 1.25;
+
+    color: var(--text);
 }
 
 .section-title span {
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 600;
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    white-space: nowrap;
 }
 
-/* =========================
+/* =========================================================
    QUICK MENU
-========================= */
+========================================================= */
 
 .quick-menu {
+    width: 100%;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 27px;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 24px;
 }
 
 .quick-item {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 13px 5px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    transition: .2s;
+    min-width: 0;
+
+    min-height: 110px;
+
+    padding:
+        16px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 18px;
+
+    background:
+        var(--card);
+
+    color:
+        var(--text);
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
 }
 
 .quick-item:hover {
-    transform: translateY(-3px);
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(18, 107, 69, 0.30);
 }
+
+.quick-item > span {
+    font-size: 13px;
+
+    color:
+        var(--text);
+}
+
+/* =========================================================
+   QUICK MENU ICON
+========================================================= */
 
 .quick-icon {
-    width: 40px;
-    height: 40px;
-    margin: auto auto 7px;
-    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    background: rgba(23,107,69,.1);
-    color: var(--primary);
+
+    border-radius: 14px;
+
+    background:
+        var(--soft);
+
+    color:
+        var(--primary);
 }
 
-.quick-icon svg {
-    width: 19px;
-    height: 19px;
-    stroke-width: 1.8;
+.quick-icon .icon {
+    width: 22px;
+    height: 22px;
 }
 
-.quick-item span {
-    display: block;
-    font-size: 11px;
-    font-weight: 600;
+/* =========================================================
+   ANNOUNCEMENT
+========================================================= */
+
+.announcement {
+    width: 100%;
+
+    margin:
+        0 0 30px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 25px
+        rgba(18, 107, 69, 0.16);
 }
 
-/* =========================
-   ARTICLE CARD
-========================= */
+.announcement small {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.4px;
+
+    color:
+        rgba(255, 255, 255, 0.90);
+}
+
+.announcement small .icon {
+    width: 15px;
+    height: 15px;
+}
+
+.announcement h3 {
+    margin:
+        0 0 6px;
+
+    font-size: 16px;
+
+    color: #ffffff;
+}
+
+.announcement p {
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+}
+
+/* =========================================================
+   ARTICLE LIST
+========================================================= */
 
 .article-list {
+    width: 100%;
+
     display: grid;
-    gap: 15px;
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
 }
+
+/* =========================================================
+   ARTICLE CARD
+========================================================= */
 
 .article-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 18px;
+    width: 100%;
+
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: .25s;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 18px;
+
+    background:
+        var(--card);
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        background 0.25s ease,
+        border 0.25s ease;
 }
 
-.article-card:hover {
-    transform: translateY(-2px);
-}
+/* =========================================================
+   ARTICLE IMAGE
+========================================================= */
 
 .article-image {
-    height: 155px;
-    background:
-        linear-gradient(135deg,
-        #176b45,
-        #0d4930);
     position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 15px;
-    color: white;
+
+    width: 100%;
+
+    height: 125px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #176a48,
+            #2b8b61
+        );
 }
 
-.article-image::before {
-    content: "";
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    border: 25px solid rgba(255,255,255,.08);
-    border-radius: 50%;
-    right: -30px;
-    top: -40px;
+.article-card:nth-child(2)
+.article-image {
+    background:
+        linear-gradient(
+            135deg,
+            #145b40,
+            #4a9270
+        );
 }
+
+.article-card:nth-child(3)
+.article-image {
+    background:
+        linear-gradient(
+            135deg,
+            #0d5236,
+            #267b54
+        );
+}
+
+/* =========================================================
+   ARTICLE CATEGORY
+========================================================= */
 
 .article-category {
-    position: relative;
-    z-index: 2;
-    background: var(--accent);
-    color: #3d2c04;
-    padding: 5px 9px;
+    position: absolute;
+
+    left: 14px;
+    bottom: 12px;
+
+    padding:
+        5px 9px;
+
     border-radius: 20px;
-    font-size: 10px;
-    font-weight: bold;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    color:
+        var(--primary);
+
+    font-size: 9px;
+
+    font-weight: 800;
 }
+
+/* =========================================================
+   ARTICLE BODY
+========================================================= */
 
 .article-body {
     padding: 16px;
 }
 
 .article-title {
-    font-size: 17px;
+    margin:
+        0 0 7px;
+
+    font-size: 16px;
+
     line-height: 1.35;
-    margin-bottom: 7px;
+
+    color:
+        var(--text);
 }
 
 .article-description {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.55;
-    margin-bottom: 13px;
+    margin:
+        0 0 13px;
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
 }
+
+/* =========================================================
+   ARTICLE FOOTER
+========================================================= */
 
 .article-footer {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
-    font-size: 11px;
-    color: var(--muted);
+
+    color:
+        var(--muted);
+
+    font-size: 10px;
 }
 
 .read-more {
-    color: var(--primary);
-    font-weight: bold;
-    cursor: pointer;
+    color:
+        var(--primary);
+
+    font-weight: 700;
 }
 
-/* =========================
-   ANNOUNCEMENT
-========================= */
-
-.announcement {
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--primary-dark)
-    );
-    color: white;
-    padding: 17px;
-    border-radius: 18px;
-    margin-bottom: 27px;
-    box-shadow: var(--shadow);
-}
-
-.announcement small {
-    opacity: .75;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.announcement small svg {
-    width: 13px;
-    height: 13px;
-}
-
-.announcement h3 {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.announcement p {
-    font-size: 12px;
-    line-height: 1.5;
-    opacity: .85;
-}
-
-/* =========================
+/* =========================================================
    BOTTOM NAVIGATION
-========================= */
+========================================================= */
 
 .bottom-nav {
     position: fixed;
-    bottom: 12px;
+
+    z-index: 999;
+
     left: 50%;
-    transform: translateX(-50%);
+    bottom: 12px;
 
-    width: calc(100% - 24px);
+    width:
+        calc(100% - 24px);
+
     max-width: 850px;
-    height: 65px;
 
-    background: rgba(255,255,255,.96);
-    border: 1px solid var(--border);
-    border-radius: 20px;
+    height: 68px;
+
+    transform:
+        translateX(-50%);
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
 
-    box-shadow: 0 10px 35px rgba(0,0,0,.15);
-    z-index: 100;
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 21px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.14);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
 }
 
 body.dark .bottom-nav {
-    background: rgba(24,32,28,.96);
+    background:
+        rgba(24, 32, 28, 0.96);
 }
 
 .nav-item {
     height: 100%;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
 
-    gap: 4px;
+    gap: 5px;
+
+    color:
+        var(--muted);
 
     text-decoration: none;
-    color: var(--muted);
-    text-align: center;
-    font-size: 10px;
-    cursor: pointer;
 
-    transition: .2s;
+    font-size: 10px;
+
+    transition:
+        color 0.18s ease,
+        transform 0.18s ease;
 }
 
-.nav-item svg {
+.nav-item .icon {
     width: 20px;
     height: 20px;
-    stroke-width: 1.7;
-}
-
-.nav-item span {
-    line-height: 1;
 }
 
 .nav-item:hover {
-    color: var(--primary);
-    transform: translateY(-2px);
+    color:
+        var(--primary);
+
+    transform:
+        translateY(-1px);
 }
 
 .nav-item.active {
-    color: var(--primary);
-    font-weight: bold;
+    color:
+        var(--primary);
+
+    font-weight: 700;
 }
 
-.nav-item.active svg {
-    stroke-width: 2.2;
-}
-
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (min-width: 600px) {
 
     .header {
-        min-height: 220px;
-        padding: 35px;
-        border-radius: 0 0 25px 25px;
-    }
+        min-height: 300px;
 
-    .header h1 {
-        font-size: 31px;
-    }
-
-    .header p {
-        font-size: 14px;
+        padding:
+            45px 44px 38px;
     }
 
     .content {
-        padding: 28px 25px;
+        padding:
+            35px 30px 25px;
     }
 
     .article-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
-    .article-image {
-        height: 170px;
-    }
-
-    .nav-item svg {
-        width: 21px;
-        height: 21px;
-    }
-
-    .nav-item {
-        font-size: 11px;
+    .article-card:first-child {
+        grid-column:
+            1 / -1;
     }
 }
 
-/* =========================
-   DESKTOP
-========================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media (min-width: 850px) {
+@media (max-width: 599px) {
 
     .app {
-        background: var(--bg);
+        max-width: 100%;
     }
 
     .header {
-        border-radius: 0 0 30px 30px;
+        min-height: 285px;
+
+        padding:
+            30px 22px 30px;
+
+        border-radius:
+            0 0 30px 30px;
+    }
+
+    .logo {
+        width: 55px !important;
+        height: 55px !important;
+
+        min-width: 55px !important;
+        min-height: 55px !important;
+
+        max-width: 55px !important;
+        max-height: 55px !important;
+    }
+
+    .logo img {
+        width: 47px !important;
+        height: 47px !important;
+
+        min-width: 47px !important;
+        min-height: 47px !important;
+
+        max-width: 47px !important;
+        max-height: 47px !important;
+    }
+
+    .header h1 {
+        font-size: 29px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .theme-btn {
+        top: 18px;
+        right: 18px;
+
+        width: 45px;
+        height: 45px;
+    }
+
+    .content {
+        padding:
+            25px 15px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 21px;
     }
 
     .quick-menu {
-        gap: 14px;
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .quick-item {
+        min-height: 105px;
     }
 
     .article-list {
-        grid-template-columns: repeat(3, 1fr);
+        gap: 13px;
     }
 }
 
-/* =========================
-   HP KECIL
-========================= */
+/* =========================================================
+   SMALL PHONE
+========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
+
+    .header {
+        min-height: 270px;
+
+        padding:
+            26px 18px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 
     .bottom-nav {
-        width: calc(100% - 20px);
-        height: 68px;
-        bottom: 9px;
-        border-radius: 20px;
-    }
+        width:
+            calc(100% - 14px);
 
-    .nav-item {
-        gap: 5px;
-        font-size: 10px;
-    }
-
-    .nav-item svg {
-        width: 20px;
-        height: 20px;
+        bottom: 7px;
     }
 }
