@@ -868,118 +868,276 @@ body.dark .bottom-nav {
 }
 
 /* =========================================================
-   MOBILE
+   FINAL FIX LAYOUT LANDING PAGE
+   Tempelkan PALING BAWAH style.css
 ========================================================= */
 
-@media (max-width: 599px) {
+/* Batasi seluruh aplikasi */
+.app {
+    width: 100% !important;
+    max-width: 900px !important;
+    min-height: 100vh !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding-bottom: 105px !important;
+
+    position: relative !important;
+}
+
+/* Header harus tampil kembali */
+.header {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 900px !important;
+
+    min-height: 300px !important;
+
+    padding: 45px 44px 38px !important;
+
+    overflow: hidden !important;
+
+    box-sizing: border-box !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b5938 0%,
+            #1d8055 100%
+        ) !important;
+
+    border-radius:
+        0 0 34px 34px !important;
+}
+
+/* Isi header */
+.header-content {
+    position: relative !important;
+    z-index: 5 !important;
+
+    display: block !important;
+}
+
+/* Logo tetap kecil */
+.header .logo {
+    width: 55px !important;
+    height: 55px !important;
+
+    min-width: 55px !important;
+    min-height: 55px !important;
+
+    max-width: 55px !important;
+    max-height: 55px !important;
+
+    padding: 4px !important;
+    margin: 0 0 20px 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    border-radius: 15px !important;
+
+    background: #ffffff !important;
+}
+
+.header .logo img {
+    display: block !important;
+
+    width: 47px !important;
+    height: 47px !important;
+
+    min-width: 47px !important;
+    min-height: 47px !important;
+
+    max-width: 47px !important;
+    max-height: 47px !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Judul */
+.header h1 {
+    display: block !important;
+
+    margin:
+        0 0 8px 0 !important;
+
+    color: #ffffff !important;
+
+    font-size: 36px !important;
+    line-height: 1.16 !important;
+}
+
+/* Deskripsi */
+.header p {
+    display: block !important;
+
+    margin: 0 !important;
+
+    color:
+        rgba(255,255,255,.90) !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.55 !important;
+}
+
+/* Lingkaran dekorasi */
+.header::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 270px !important;
+    height: 270px !important;
+
+    right: -90px !important;
+    top: -105px !important;
+
+    border-radius: 50% !important;
+
+    background:
+        rgba(255,255,255,.08) !important;
+
+    z-index: -1 !important;
+}
+
+.header::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 145px !important;
+    height: 145px !important;
+
+    left: -72px !important;
+    bottom: -78px !important;
+
+    border-radius: 50% !important;
+
+    background:
+        rgba(180,160,45,.13) !important;
+
+    z-index: -1 !important;
+}
+
+/* Content harus mengikuti lebar app */
+.content {
+    width: 100% !important;
+    max-width: 900px !important;
+
+    margin: 0 auto !important;
+
+    padding:
+        34px 26px 25px !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Menu tetap 4 kolom pada desktop */
+.quick-menu {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr)) !important;
+
+    gap: 18px !important;
+}
+
+/* Kartu menu */
+.quick-item {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    min-height: 110px !important;
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 901px) {
+
+    body {
+        background: var(--bg) !important;
+    }
 
     .app {
-        max-width: 100%;
+        max-width: 900px !important;
+    }
+
+}
+
+/* =========================================================
+   TABLET / HP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .app {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .header {
-        min-height: 285px;
-
-        padding:
-            30px 22px 30px;
-
-        border-radius:
-            0 0 30px 30px;
-    }
-
-    .logo {
-        width: 55px !important;
-        height: 55px !important;
-
-        min-width: 55px !important;
-        min-height: 55px !important;
-
-        max-width: 55px !important;
-        max-height: 55px !important;
-    }
-
-    .logo img {
-        width: 47px !important;
-        height: 47px !important;
-
-        min-width: 47px !important;
-        min-height: 47px !important;
-
-        max-width: 47px !important;
-        max-height: 47px !important;
-    }
-
-    .header h1 {
-        font-size: 29px;
-    }
-
-    .header p {
-        font-size: 13px;
-    }
-
-    .theme-btn {
-        top: 18px;
-        right: 18px;
-
-        width: 45px;
-        height: 45px;
+        max-width: 100% !important;
     }
 
     .content {
-        padding:
-            25px 15px 20px;
-    }
-
-    .section-title h2 {
-        font-size: 21px;
-    }
-
-    .quick-menu {
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 12px;
-    }
-
-    .quick-item {
-        min-height: 105px;
-    }
-
-    .article-list {
-        gap: 13px;
+        max-width: 100% !important;
     }
 }
 
 /* =========================================================
-   SMALL PHONE
+   HP
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 599px) {
 
     .header {
-        min-height: 270px;
+        min-height: 285px !important;
 
         padding:
-            26px 18px;
+            30px 22px 30px !important;
+
+        border-radius:
+            0 0 30px 30px !important;
     }
 
     .header h1 {
-        font-size: 26px;
+        font-size: 29px !important;
     }
 
     .header p {
-        font-size: 12px;
+        font-size: 13px !important;
     }
 
     .content {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding:
+            25px 15px 20px !important;
     }
 
-    .bottom-nav {
-        width:
-            calc(100% - 14px);
+    .quick-menu {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
 
-        bottom: 7px;
+        gap: 12px !important;
+    }
+
+    .quick-item {
+        min-height: 105px !important;
     }
 }
